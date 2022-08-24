@@ -30,6 +30,8 @@ module PLATFORM
 
   def PLATFORM.architecture
     case RbConfig::CONFIG['host_cpu']
+      when /aarch64/
+        'x86_64'
       when /x86_64/
         'x86_64'
       else
